@@ -16,6 +16,7 @@ function animate() {
 
     bird.uptade()
     bird.draw()
+    handleParticles()
     requestAnimationFrame(animate)
     angle+=0.12;
 }
