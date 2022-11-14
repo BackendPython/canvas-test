@@ -10,19 +10,20 @@ let frame = 0;
 let score = 0;
 let gamespeed = 2;
 
-let temp = canvas.height - 90
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillRect(10, temp, 50, 50);
+
+    bird.uptade()
+    bird.draw()
     requestAnimationFrame(animate)
+    angle+=0.12;
 }
 animate()
 
 window.addEventListener('keydown', function (e) {
     if (e.code=='Space') {
         spacePressed = true;
-        temp -= 20
     }
 })
 
