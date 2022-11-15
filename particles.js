@@ -22,6 +22,7 @@ class Particle {
 
 function handleParticles() {
     particlesArray.unshift(new Particle);
+    
     for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].uptade()
         particlesArray[i].draw()
