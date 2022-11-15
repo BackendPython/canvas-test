@@ -13,13 +13,15 @@ let gamespeed = 2;
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    bird.uptade()
-    bird.draw()
-    handleParticles()
-    requestAnimationFrame(animate)
+    
+    bird.uptade();
+    bird.draw();
+    handleParticles();
+    requestAnimationFrame(animate);
     angle+=0.12;
+    hue++;
 }
+
 animate()
 
 window.addEventListener('keydown', function (e) {

@@ -6,7 +6,7 @@ class Particle {
         this.y = bird.y;
         this.size = Math.random() * 7 + 3;
         this.speedY = (Math.random() * 1) - 0.5;
-        this.color = 'red'
+        this.color = 'hsla('+ hue + ', 100%, 50%, 0.8)';
     }
     uptade(){
         this.x -= gamespeed;
@@ -21,17 +21,18 @@ class Particle {
 }
 
 function handleParticles() {
+
     particlesArray.unshift(new Particle);
     
-    for (let i = 0; i < particlesArray.length; i++) {
-        particlesArray[i].uptade()
-        particlesArray[i].draw()
+    for (i = 0; i < particlesArray.length; i++) {
+        particlesArray[i].uptade();
+        particlesArray[i].draw();
     }
 
     // if more than 200, remove 20
     if (particlesArray.length > 200) {
         for(let i = 0; i < 20; i++){
-            particlesArray.pop(particlesArray[i])
+            particlesArray.pop(particlesArray[i]);
         }
     }
 }
