@@ -72,3 +72,6 @@ function handleColisions() {
         }
     }
 }
+
+const background = new Image();
+background.src = '';
